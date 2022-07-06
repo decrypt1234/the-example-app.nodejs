@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: cypress/base:8
+ #   docker:
+ #     - image: cypress/base:8
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache 
@@ -16,10 +16,10 @@ jobs:
             - ./node_modules
       - run:
           name: clone-e2e-test
-          command: git clone https://github.com/contentful/the-example-app-e2e-tests.git ./test/e2e
+          command: https://github.com/decrypt1234/the-example-app.nodejs.git/test/run-e2e-test.js
       - run:
-          name: install-e2e-test
-          command: cd ./test/e2e && npm install
+          name: install-un-e2e-test.js-test
+          command: cd ./test/un-e2e-test.js && npm install
       - run:
           name: test
           command: npm run test
