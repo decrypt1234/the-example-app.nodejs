@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    - run: https://github.com/decrypt1234/the-example-app.nodejs.git
  #   docker:
  #     - image: cypress/base:8
     steps:
